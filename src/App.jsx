@@ -1,11 +1,9 @@
-// import './App.css'
-import { Items } from './components/Items'
+import { Container } from './components/Container'
 
 function App() {
-
   return (
     <>
-      <Items />
+      <Container />
     </>
   )
 }
