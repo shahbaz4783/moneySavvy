@@ -17,3 +17,20 @@
   margin: 1em;
   padding: 0.5em;
 }
+
+.form-modal {
+  padding: 2em;
+  margin: 2em;
+  background-color: gainsboro;
+}
+
+form {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+
+  & input {
+   padding: 1em;
+  }
+
+}
