@@ -24,9 +24,7 @@ const items = [
 export const Container = () => {
 	return (
 		<>
-			<Card date={items[0].date} item={items[0].item} price={items[0].price} />
-			<Card date={items[1].date} item={items[1].item} price={items[1].price} />
-			<Card date={items[2].date} item={items[2].item} price={items[2].price} />
+      {items.map(item => <Card date={item.date} item={item.item} price={item.price} />)}
 		</>
 	);
 };
