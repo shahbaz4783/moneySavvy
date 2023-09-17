@@ -18,11 +18,11 @@ export const ItemForm = (props) => {
   const submitHandler = (e) => {
 		e.preventDefault();
 		const data = {
-			item: item,
+			name: item,
 			price: price,
 			date: new Date(date),
 		};
-    
+
     props.onSaveItemData(data);
 
 		setItem('');
@@ -51,6 +51,7 @@ export const ItemForm = (props) => {
 				max={'2023-12-31'}
 				placeholder='Choose Date'
 				value={date}
+        required
 			/>
 			<button type='submit'>Add</button>
 		</form>
