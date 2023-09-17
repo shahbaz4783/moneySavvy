@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const ItemForm = () => {
+export const ItemForm = (props) => {
 	const [item, setItem] = useState('');
 	const [price, setPrice] = useState('');
 	const [date, setDate] = useState('');
@@ -22,7 +22,8 @@ export const ItemForm = () => {
 			price: price,
 			date: new Date(date),
 		};
-		console.log(data);
+    
+    props.onSaveItemData(data);
 
 		setItem('');
 		setPrice('');
