@@ -2,9 +2,13 @@ import { Container } from './components/Container'
 import { FormModal } from './components/FormModal'
 
 function App() {
+  const addItemHandler = (item) => {
+    console.log('Its App.js');
+      console.log(item);
+  }
   return (
     <>
-    <FormModal />
+      <FormModal onAddItem={addItemHandler} />
       <Container />
     </>
   )

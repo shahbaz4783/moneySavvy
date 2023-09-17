@@ -1,12 +1,12 @@
 import { ItemForm } from "./ItemForm"
 
-export const FormModal = () => {
+export const FormModal = (props) => {
 			const saveItemDataHandler = (enteredItedData) => {
 				const itemData = {
 					...enteredItedData,
 					id: Math.random().toString(),
 				};
-				console.log(itemData);
+                props.onAddItem(itemData)
 			};
   return (
 		<div className='form-modal'>
