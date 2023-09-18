@@ -53,6 +53,7 @@ export const ItemForm = (props) => {
 				value={date}
         required
 			/>
+			<button onClick={props.onCancel}>Cancel</button>
 			<button type='submit'>Add</button>
 		</form>
 	);

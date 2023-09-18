@@ -19,6 +19,8 @@ export const Container = ({ data }) => {
 				onFilterChange={filterChangeHandler}
 			/>
 
+      {filteredItem.length === 0 && <p>No Items Found</p>}
+
 			{filteredItem.map((item) => (
 				<Card
 					key={item.id}
