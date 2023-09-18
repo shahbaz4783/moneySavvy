@@ -11,13 +11,13 @@ const DUMMY_EXPENSE = [
 	},
 	{
 		id: 2,
-		date: new Date('23 Mar, 2023'),
+		date: new Date('23 Mar, 2022'),
 		name: 'Monitor',
 		price: '$40',
 	},
 	{
 		id: 3,
-		date: new Date('14 June, 2023'),
+		date: new Date('14 June, 2021'),
 		name: 'Keyboard',
 		price: '$150',
 	},

@@ -1,11 +1,11 @@
-export const ItemFilter = () => {
+export const ItemFilter = (props) => {
     const filterHandler = (e) => {
-        console.log(e.target.value);
+        props.onFilterChange(e.target.value);
     }
   return (
     <div>
         <label>Filter By Year</label>
-        <select onChange={filterHandler}>
+        <select value={props.selected} onChange={filterHandler}>
             <option value={'2023'}>2023</option>
             <option value={'2022'}>2022</option>
             <option value={'2021'}>2021</option>
