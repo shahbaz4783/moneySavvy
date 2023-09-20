@@ -5,8 +5,13 @@ export const ItemForm = (props) => {
 	const [price, setPrice] = useState('');
 	const [date, setDate] = useState('');
 
+  const [isValid, setIsValid] = useState(true);
+
 	const itemHandler = (e) => {
 		setItem(e.target.value);
+    if (e.target.value.trim().length > 0) {
+			setIsValid(true);
+		}
 	};
 	const dateHandler = (e) => {
 		setDate(e.target.value);
@@ -28,11 +33,17 @@ export const ItemForm = (props) => {
 		setItem('');
 		setPrice('');
 		setDate('');
+
+    if (item.trim().length === 0) {
+			setIsValid(false);
+			return;
+		}
 	};
 
 	return (
 		<form onSubmit={submitHandler}>
 			<input
+				style={{ background: !isValid && 'pink' }}
 				onChange={itemHandler}
 				value={item}
 				type='text'
@@ -51,7 +62,6 @@ export const ItemForm = (props) => {
 				max={'2023-12-31'}
 				placeholder='Choose Date'
 				value={date}
-        required
 			/>
 			<button onClick={props.onCancel}>Cancel</button>
 			<button type='submit'>Add</button>
