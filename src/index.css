@@ -32,3 +32,8 @@ form {
 		padding: 1em;
 	}
 }
+
+.invalid {
+  background-color: red;
+  color: white;
+}

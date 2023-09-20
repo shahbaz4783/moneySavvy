@@ -5,11 +5,11 @@ export const ItemForm = (props) => {
 	const [price, setPrice] = useState('');
 	const [date, setDate] = useState('');
 
-  const [isValid, setIsValid] = useState(true);
+	const [isValid, setIsValid] = useState(true);
 
 	const itemHandler = (e) => {
 		setItem(e.target.value);
-    if (e.target.value.trim().length > 0) {
+		if (e.target.value.trim().length > 0) {
 			setIsValid(true);
 		}
 	};
@@ -18,9 +18,12 @@ export const ItemForm = (props) => {
 	};
 	const priceHandler = (e) => {
 		setPrice(e.target.value);
+		if (e.target.value.trim().length > 0) {
+			setIsValid(true);
+		}
 	};
 
-  const submitHandler = (e) => {
+	const submitHandler = (e) => {
 		e.preventDefault();
 		const data = {
 			name: item,
@@ -28,13 +31,13 @@ export const ItemForm = (props) => {
 			date: new Date(date),
 		};
 
-    props.onSaveItemData(data);
+		props.onSaveItemData(data);
 
 		setItem('');
 		setPrice('');
 		setDate('');
 
-    if (item.trim().length === 0) {
+		if (item.trim().length === 0) {
 			setIsValid(false);
 			return;
 		}
@@ -50,6 +53,7 @@ export const ItemForm = (props) => {
 				placeholder='Enter Item Name'
 			/>
 			<input
+				className={`${!isValid && 'invalid'}`}
 				onChange={priceHandler}
 				value={price}
 				type='number'
