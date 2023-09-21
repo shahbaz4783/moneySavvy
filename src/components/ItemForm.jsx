@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-export const ItemForm = (props) => {
+export const ItemForm = ({ onSaveItemData , onCancel}) => {
 	const [item, setItem] = useState('');
 	const [price, setPrice] = useState('');
 	const [date, setDate] = useState('');
-  const [isValid, setIsValid] = useState(true);
+	const [isValid, setIsValid] = useState(true);
 
 	const itemHandler = (e) => {
 		setItem(e.target.value);
@@ -30,7 +30,7 @@ export const ItemForm = (props) => {
 			date: new Date(date),
 		};
 
-		props.onSaveItemData(data);
+		onSaveItemData(data);
 
 		setItem('');
 		setPrice('');
@@ -66,7 +66,7 @@ export const ItemForm = (props) => {
 				placeholder='Choose Date'
 				value={date}
 			/>
-			<button onClick={props.onCancel}>Cancel</button>
+			<button onClick={onCancel}>Cancel</button>
 			<button type='submit'>Add</button>
 		</form>
 	);
