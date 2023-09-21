@@ -4,8 +4,7 @@ export const ItemForm = (props) => {
 	const [item, setItem] = useState('');
 	const [price, setPrice] = useState('');
 	const [date, setDate] = useState('');
-
-	const [isValid, setIsValid] = useState(true);
+  const [isValid, setIsValid] = useState(true);
 
 	const itemHandler = (e) => {
 		setItem(e.target.value);

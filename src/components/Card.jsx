@@ -5,7 +5,6 @@ export const Card = ({ date, item, price }) => {
 			<p>{date}</p>
 			<h3>{item}</h3>
 			<p>{price}</p>
-			<button>Change Title</button>
 		</div>
 	);
 }
