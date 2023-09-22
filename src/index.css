@@ -39,10 +39,10 @@ form {
 }
 
 
+/* Card Styling */
 .task {
   position: relative;
   color: #2e2e2f;
-  cursor: move;
   background-color: #fff;
   padding: 1rem;
   border-radius: 8px;
@@ -52,10 +52,7 @@ form {
   max-width: 350px;
 }
 
-.task:hover {
-  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
-  border-color: rgba(162, 179, 207, 0.2) !important;
-}
+
 
 .task p {
   font-size: 15px;
@@ -89,47 +86,128 @@ form {
   width: 20px;
 }
 
-.stats {
-  position: relative;
+
+
+/* Form */
+
+.button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  color: #9fa4aa;
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  box-shadow: 0 15px 30px 0 rgba(0, 125, 171, 0.15);
+  border-radius: 10px;
+}
+
+.modal__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.stats div {
-  margin-right: 1rem;
-  height: 20px;
+.modal__body {
+  padding: 1rem 1rem;
+}
+
+.modal__footer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s ease;
+}
+
+.button--icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+}
+
+.button--icon:focus, .button--icon:hover {
+  background-color: #ededed;
+}
+
+.button--primary {
+  background-color: #007dab;
+  color: #FFF;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.button--primary:hover {
+  background-color: #006489;
+}
+
+.input {
   display: flex;
-  align-items: center;
-  cursor: pointer;
+  flex-direction: column;
 }
 
-.stats svg {
-  margin-right: 5px;
-  height: 100%;
-  stroke: #9fa4aa;
+.input + .input {
+  margin-top: 1.75rem;
 }
 
-.viewer span {
-  height: 30px;
-  width: 30px;
-  background-color: rgb(28, 117, 219);
-  margin-right: -10px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  display: grid;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  padding: 2px;
+.input__label {
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 
-.viewer span svg {
-  stroke: #fff;
+.input__field {
+  display: block;
+  margin-top: 0.5rem;
+  border: 1px solid #DDD;
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.75rem;
+  transition: 0.15s ease;
 }
 
+.input__field:focus {
+  outline: none;
+  border-color: #007dab;
+  box-shadow: 0 0 0 1px #007dab, 0 0 0 4px rgba(0, 125, 171, 0.25);
+}
 
+.input__field--textarea {
+  min-height: 100px;
+  max-width: 100%;
+}
+
+.input__description {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: #8d8d8d;
+}
