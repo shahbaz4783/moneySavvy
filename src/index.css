@@ -18,9 +18,9 @@
 }
 
 .form-modal {
-	padding: 2em;
-	margin: 2em;
-	background-color: gainsboro;
+	margin: 2em 0;
+  display: flex;
+  justify-content: flex-end
 }
 
 form {
@@ -46,7 +46,7 @@ form {
   background-color: #fff;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-bottom: 1rem;
   border: 3px dashed transparent;
   max-width: 350px;
@@ -210,4 +210,52 @@ form {
   font-size: 0.875rem;
   margin-top: 0.5rem;
   color: #8d8d8d;
+}
+
+
+/* Add Button */
+.addItemBtn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid blue;
+  border-radius: 2px;
+  position: relative;
+  color: blue;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.addItemBtn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: blue;
+  z-index: -1;
+}
+
+.addItemBtn:hover, .addItemBtn:focus {
+  color: white;
+}
+
+.addItemBtn:hover:before, .addItemBtn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.addItemBtn:active {
+  transform: scale(0.9);
 }

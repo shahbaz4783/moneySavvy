@@ -22,8 +22,14 @@ export const FormModal = (props) => {
 
   return (
 		<div className='form-modal'>
-			{!formUse && <button onClick={formUseHandler}>Add Item</button>}
-			{formUse && <ItemForm onCancel={cancelForm} onSaveItemData={saveItemDataHandler} />}
+			{!formUse && (
+				<button className='addItemBtn' onClick={formUseHandler}>
+					Add Item
+				</button>
+			)}
+			{formUse && (
+				<ItemForm onCancel={cancelForm} onSaveItemData={saveItemDataHandler} />
+			)}
 		</div>
 	);
 }
