@@ -72,7 +72,7 @@ export const ItemForm = ({ onSaveItemData , onCancel}) => {
 									value={item}
 								/>
 								<p class='input__description'>
-									The title must contain a maximum of 32 characters
+									Enter the name of your purchase
 								</p>
 							</div>
 							<div class='input'>
@@ -83,9 +83,7 @@ export const ItemForm = ({ onSaveItemData , onCancel}) => {
 									onChange={priceHandler}
 									value={price}
 								/>
-								<p class='input__description'>
-									The title must contain a maximum of 32 characters
-								</p>
+								<p class='input__description'>Enter the amout you spent</p>
 							</div>
 							<div class='input'>
 								<label class='input__label'>Enter Date</label>
@@ -96,15 +94,14 @@ export const ItemForm = ({ onSaveItemData , onCancel}) => {
 									value={date}
 								/>
 								<p class='input__description'>
-									The title must contain a maximum of 32 characters
+									Enter the date when you made purchase
 								</p>
 							</div>
 							<div class='input'>
 								<label class='input__label'>Description</label>
 								<textarea class='input__field input__field--textarea'></textarea>
 								<p class='input__description'>
-									Give your project a good description so everyone know what's
-									it for
+									The desctiption of your purchase
 								</p>
 							</div>
 						</div>
