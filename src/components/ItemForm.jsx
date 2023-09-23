@@ -48,7 +48,7 @@ export const ItemForm = ({ onSaveItemData , onCancel}) => {
 				<div class='container'>
 					<div class='modal'>
 						<div class='modal__header'>
-							<span class='modal__title'>New project</span>
+							<span class='modal__title'>Add New Item</span>
 							<button class='button button--icon'>
 								<svg
 									width='24'

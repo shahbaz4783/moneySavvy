@@ -27,6 +27,7 @@ form {
 	display: flex;
 	gap: 1em;
 	flex-direction: column;
+  z-index: 100;
 
 	& input {
 		padding: 1em;
@@ -258,4 +259,25 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 .addItemBtn:active {
   transform: scale(0.9);
+}
+
+
+/* Filter Container */
+.filter-container {
+  background-color: aliceblue;
+  margin: 2em 0;
+  padding: 1.5em 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.selectTab {
+  font-size: 1em;
+  padding: 0.6em 2em;
+}
+
+.filter-label {
+      display: flex;
+    align-items: center;
 }
